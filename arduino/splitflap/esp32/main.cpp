@@ -24,7 +24,7 @@
 #include "splitflap_task.h"
 
 SplitflapTask splitflapTask(1);
-DisplayTask displayTask(splitflapTask, 0);
+// DisplayTask displayTask(splitflapTask, 0);
 
 #ifdef MQTT
 #include "mqtt_task.h"
@@ -39,7 +39,7 @@ void setup() {
   #ifdef MQTT
   mqttTask.begin();
   #endif
-  displayTask.begin();
+  // displayTask.begin();
 
   // Delete the default Arduino loopTask to free up Core 1
   vTaskDelete(NULL);
